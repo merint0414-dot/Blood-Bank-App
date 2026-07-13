@@ -1,8 +1,10 @@
 import React from 'react'
+import NavigationBar from './NavigationBar'
 
 const Home = () => {
     return (
         <div>
+            <NavigationBar />
             <div className="container mt-5">
                 <div className="card shadow">
                     <div className="card-body text-center">

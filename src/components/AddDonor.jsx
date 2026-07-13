@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import NavigationBar from './NavigationBar'
 
 
 
@@ -33,39 +34,39 @@ const AddDonor = () => {
             "https://host-demo-app.onrender.com/api/add-donor",
             input
         )
-        .then((response) => {
+            .then((response) => {
 
-            setError(false)
-            setMessage("Donor added successfully")
+                setError(false)
+                setMessage("Donor added successfully")
 
-            changeInput({
-                donor_name: "",
-                age: "",
-                gender: "",
-                blood_group: "",
-                phone: "",
-                email: "",
-                city: "",
-                weight_kg: "",
-                last_donation_date: ""
+                changeInput({
+                    donor_name: "",
+                    age: "",
+                    gender: "",
+                    blood_group: "",
+                    phone: "",
+                    email: "",
+                    city: "",
+                    weight_kg: "",
+                    last_donation_date: ""
+                })
             })
-        })
-        .catch((err) => {
+            .catch((err) => {
 
-            setError(true)
+                setError(true)
 
-            if (err.response && err.response.data.message) {
-                setMessage(err.response.data.message)
-            } else {
-                setMessage("Something went wrong")
-            }
-        })
+                if (err.response && err.response.data.message) {
+                    setMessage(err.response.data.message)
+                } else {
+                    setMessage("Something went wrong")
+                }
+            })
     }
 
     return (
         <div>
-           
 
+            <NavigationBar />
             <div className="container mt-4">
 
                 <div className="card shadow">
