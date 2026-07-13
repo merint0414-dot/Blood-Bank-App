@@ -5,13 +5,15 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Home from './components/Home'
 import AddDonor from './components/AddDonor'
+import ViewDonors from './components/ViewDonor'
+import ViewDonor from './components/ViewDonor'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-     <AddDonor/>
+     <ViewDonor/>
     </>
   )
 }
