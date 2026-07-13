@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import NavigationBar from './NavigationBar'
 
 
 const ViewDonor = () => {
@@ -12,18 +13,18 @@ const ViewDonor = () => {
         axios.get(
             "https://host-demo-app.onrender.com/api/donors"
         )
-        .then((response) => {
+            .then((response) => {
 
-            changeData(response.data)
-            setLoading(false)
+                changeData(response.data)
+                setLoading(false)
 
-        })
-        .catch((error) => {
+            })
+            .catch((error) => {
 
-            console.log(error)
-            setLoading(false)
+                console.log(error)
+                setLoading(false)
 
-        })
+            })
     }
 
     useEffect(() => {
@@ -33,7 +34,7 @@ const ViewDonor = () => {
     return (
         <div>
 
-          
+            <NavigationBar />
 
             <div className="container mt-4">
 
