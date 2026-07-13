@@ -30,7 +30,7 @@ const AddDonor = () => {
 
     const submitData = () => {
 
-        axios.get(
+        axios.post(
             "https://host-demo-app.onrender.com/api/add-donor",
             input
         )
